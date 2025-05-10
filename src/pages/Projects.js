@@ -10,17 +10,16 @@ export default function Projects() {
       <h2 className="section-title">Projects</h2>
       <div className="section-content">
         <div className="project-row left">
-          <img src={mlIcon} alt="ML Icon" className="project-icon" />
+          <img src={appIcon} alt="App Icon" className="project-icon" />
           <div className="project-desc">
-            <h3>Textile Anomaly Detection System</h3>
+            <h3>PikFresh App</h3>
             <p>
-              A smart defect detection pipeline that determines anaomalies in
-              fabrics — powered by <span className="tech">CNNs</span>,{" "}
-              <span className="tech">ResNet50</span>,{" "}
-              <span className="tech">VGG16</span>, and{" "}
-              <span className="tech">Autoencoders</span>. It doesn’t just detect
-              fabric flaws, it reconstructs them. Trained on 80,000+ images and
-              tested with custom pixel-level datasets.
+              A fruit quality inspector in your pocket. This mobile app
+              leverages <span className="tech">ResNet50</span> and{" "}
+              <span className="tech">OpenCV</span> to detect freshness in
+              real-time. The magic? A{" "}
+              <span className="tech">360° camera scanner</span> and a
+              dynamically generated report — all within 40 seconds.
             </p>
           </div>
         </div>
@@ -42,21 +41,6 @@ export default function Projects() {
         </div>
 
         <div className="project-row left">
-          <img src={appIcon} alt="App Icon" className="project-icon" />
-          <div className="project-desc">
-            <h3>PikFresh App</h3>
-            <p>
-              A fruit quality inspector in your pocket. This mobile app
-              leverages <span className="tech">ResNet50</span> and{" "}
-              <span className="tech">OpenCV</span> to detect freshness in
-              real-time. The magic? A{" "}
-              <span className="tech">360° camera scanner</span> and a
-              dynamically generated report — all within 40 seconds.
-            </p>
-          </div>
-        </div>
-
-        <div className="project-row right">
           <img src={webIcon} alt="Web Icon" className="project-icon" />
           <div className="project-desc">
             <h3>Movie Ticketing System</h3>
@@ -69,6 +53,22 @@ export default function Projects() {
               from user auth to showtime management and real-time ticketing —
               all backed by a strong <span className="tech">SQLite</span>{" "}
               database.
+            </p>
+          </div>
+        </div>
+
+        <div className="project-row right">
+          <img src={mlIcon} alt="ML Icon" className="project-icon" />
+          <div className="project-desc">
+            <h3>Textile Anomaly Detection System</h3>
+            <p>
+              A smart defect detection pipeline that determines anaomalies in
+              fabrics — powered by <span className="tech">CNNs</span>,{" "}
+              <span className="tech">ResNet50</span>,{" "}
+              <span className="tech">VGG16</span>, and{" "}
+              <span className="tech">Autoencoders</span>. It doesn’t just detect
+              fabric flaws, it reconstructs them. Trained on 80,000+ images and
+              tested with custom pixel-level datasets.
             </p>
           </div>
         </div>
