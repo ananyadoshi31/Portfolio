@@ -1,8 +1,12 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
+import VanillaTilt from "vanilla-tilt";
 import "./Home.css";
 import heroImg from "../assets/ananya-hero.png";
 
 export default function Home() {
+  const skillRefs = useRef([]);
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -18,20 +22,63 @@ export default function Home() {
     document
       .querySelectorAll(".fade-on-scroll")
       .forEach((el) => observer.observe(el));
+
+    // Apply VanillaTilt
+    skillRefs.current.forEach((ref) => {
+      if (ref) {
+        VanillaTilt.init(ref, {
+          max: 15,
+          speed: 400,
+          glare: true,
+          "max-glare": 0.2,
+        });
+      }
+    });
   }, []);
+
+  const skills = [
+    {
+      icon: "🌐",
+      title: "Website Development",
+      desc: "I design and develop full-stack, responsive websites — from sketching intuitive UIs to writing clean, efficient frontend and backend code. Beyond just building, I focus on optimizing performance, integrating APIs, writing robust tests, and deploying to scale. My stack includes React, Next.js, Django, Flask, Ruby on Rails, Python, TypeScript, and JavaScript.",
+    },
+    {
+      icon: "📱",
+      title: "Mobile App Development",
+      desc: "I'm passionate about crafting cross-platform mobile apps for both Android and iOS. From building dynamic components and integrating seamless SDKs to implementing pagination and reducing API load times — I’ve handled it all. I typically use React Native for frontend and Firebase for backend, with Redux managing the state behind the scenes.",
+    },
+    {
+      icon: "🧠",
+      title: "Machine Learning",
+      desc: "I thrive on solving real-world problems through data — from prediction and classification to anomaly detection and generative AI. My work spans computer vision, transfer learning, and recommendation systems. I’m fluent in TensorFlow, Keras, PyTorch, OpenCV, scikit-learn, NumPy, and Pandas.",
+    },
+  ];
 
   return (
     <div className="home">
       <div className="hero-section">
-        <div className="hero-left fade-on-scroll">
-          <img
+        <motion.div
+          className="hero-left"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          <motion.img
             src={heroImg}
             alt="Ananya working on laptop"
             className="hero-image"
+            animate={{ y: [0, -10, 0] }}
+            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
           />
-        </div>
-        <div className="hero-right fade-on-scroll">
-          <h1 className="hero-title">Hi, I'm Ananya Doshi</h1>
+        </motion.div>
+
+        <motion.div
+          className="hero-right"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2 }}
+        >
+          <h1 className="hero-title">Hey, I'm Ananya!</h1>
           <div className="hero-buttons">
             <a
               href="https://github.com/ananyadoshi31"
@@ -49,51 +96,35 @@ export default function Home() {
             >
               LinkedIn
             </a>
+            <a
+              href="https://drive.google.com/uc?export=download&id=1JYffvMwPXlJsm-5mtChLGzFVifpAop8T"
+              className="btn resume"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Resume
+            </a>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       <h2 className="what-i-do fade-on-scroll">What I Do</h2>
+
       <div className="cards-section">
-        <div className="skill-card fade-on-scroll">
-          <span className="icon">🌐</span>
-          <h3>Website Development</h3>
-          <p>
-            I design and develop full-stack, responsive websites — from
-            sketching intuitive UIs to writing clean, efficient frontend and
-            backend code. Beyond just building, I focus on optimizing
-            performance, integrating APIs, writing robust tests, and deploying
-            to scale. Some technologies I am proficient with include - React,
-            Next.js, Django, Flask, Restful APIs Ruby on Rails, Python,
-            TypeScript, and JavaScript.
-          </p>
-        </div>
-        <div className="skill-card fade-on-scroll">
-          <span className="icon">📱</span>
-          <h3>Mobile App Development</h3>
-          <p>
-            I'm passionate about crafting cross-platform mobile apps for both
-            Android and iOS. From building dynamic components and integrating
-            seamless SDKs to implementing pagination and reducing API load times
-            — I’ve handled it all. I typically use React Native for frontend and
-            Firebase for backend, with Redux managing the state behind the
-            scenes.
-          </p>
-        </div>
-        <div className="skill-card fade-on-scroll">
-          <span className="icon">🧠</span>
-          <h3>Machine Learning</h3>
-          <p>
-            I thrive on solving real-world problems through data — from
-            prediction and classification to anomaly detection and generative
-            AI. My experience spans computer vision, transfer learning, and
-            recommendation systems including projects like fruit quality
-            detection and personalized suggestions. I’m fluent in tools like
-            TensorFlow, Keras, PyTorch, OpenCV, scikit-learn, NumPy, Pandas, and
-            more — and I love diving into complex datasets to uncover insights
-            that drive smart decisions.
-          </p>
-        </div>
+        {skills.map((skill, index) => (
+          <motion.div
+            key={index}
+            ref={(el) => (skillRefs.current[index] = el)}
+            className="skill-card"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.2, duration: 0.6 }}
+          >
+            <span className="icon">{skill.icon}</span>
+            <h3>{skill.title}</h3>
+            <p>{skill.desc}</p>
+          </motion.div>
+        ))}
       </div>
     </div>
   );

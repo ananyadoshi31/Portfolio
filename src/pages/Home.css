@@ -539,7 +539,7 @@ body {
   }
   
   .hero-image {
-    width: 220px;
+    width: 400px;
     max-width: 100%;
     border-radius: 12px;
     object-fit: cover;
@@ -629,7 +629,7 @@ body {
     }
   
     .hero-image {
-      width: 160px;
+      width: 800px;
       margin-bottom: 20px;
     }
   }
@@ -696,7 +696,7 @@ body {
   }
 
   .hero-image {
-    width: 200px;
+    width: 800px;
   }
 
   .section-card {
@@ -731,5 +731,142 @@ body {
   .project-desc p,
   .section-card p {
     font-size: 0.9rem;
+  }
+}
+
+
+
+.hero-image {
+  animation: none; /* remove existing fadeInUp if any */
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+
+.skill-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+.resume {
+  background: #57beea;
+  color: #fff;
+  border: none;
+}
+
+.resume:hover {
+  background: #329ba6;
+}
+
+
+
+
+/* === Experience Timeline Styling === */
+.timeline {
+  position: relative;
+  margin: 60px auto;
+  padding-left: 30px;
+  border-left: 3px solid #6c63ff;
+  max-width: 900px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 50px;
+  padding-left: 30px;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.timeline-icon {
+  position: absolute;
+  left: -40px;
+  top: 0;
+  width: 28px;
+  height: 28px;
+  background-color: #6c63ff;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  box-shadow: 0 0 12px rgba(108, 99, 255, 0.6);
+  z-index: 2;
+}
+
+.timeline-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 20px 25px;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.timeline-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+}
+
+.timeline-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.4rem;
+  color: #ffffff;
+}
+
+.timeline-card p {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .timeline {
+    padding-left: 20px;
+  }
+
+  .timeline-icon {
+    left: -30px;
+  }
+
+  .timeline-card {
+    padding: 18px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-image {
+    width: 200px;
+    margin-bottom: 20px;
+  }
+
+  .skill-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .skill-card p {
+    font-size: 0.95rem;
+  }
+
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timeline-item {
+    margin-left: 50px;
+  }
+
+  .timeline-item::before {
+    left: -28px;
   }
 }
