@@ -1,63 +1,97 @@
 // src/pages/Publications.js
 import "../pages/Home.css";
-
 export default function Publications() {
   return (
     <div className="publications">
       <h2 className="section-title">Beyond the Code</h2>
 
-      <div className="section-content">
-        <div className="section-card animate-delay-1">
-          <h3>📚 Publications</h3>
-          <p>
-            • Fabric Quality Assurance System –{" "}
-            <span className="tech">IJISAE Journal</span>
-            <br />• Systematic Review of Textile Anomaly Detection –{" "}
-            <span className="tech">IEEE</span>
-            <br />• Pneumonia Detection using DNNs –{" "}
-            <span className="tech">Springer</span>
-            <br />• PikFresh – Fruit Quality Detection –{" "}
-            <span className="tech">IEEE</span>
-            <br />• Food Surplus Recommendation System –{" "}
-            <span className="tech">IEEE</span>
-          </p>
+      <div className="achievement-section">
+        <div className="achievement-card animate-delay-1">
+          <div className="card-header">
+            <span className="icon">📚</span>
+            <h3>Publications</h3>
+          </div>
+          <ul>
+            <li>
+              Fabric Quality Assurance System{" "}
+              <span className="tag">IJISAE Journal</span>
+            </li>
+            <li>
+              Systematic Review of Textile Anomaly Detection{" "}
+              <span className="tag">IEEE</span>
+            </li>
+            <li>
+              Pneumonia Detection using DNNs{" "}
+              <span className="tag">Springer</span>
+            </li>
+            <li>
+              PikFresh – Fruit Quality Detection{" "}
+              <span className="tag">IEEE</span>
+            </li>
+            <li>
+              Food Surplus Recommendation System{" "}
+              <span className="tag">IEEE</span>
+            </li>
+          </ul>
         </div>
 
-        <div className="section-card animate-delay-2">
-          <h3>📜 Certifications</h3>
-          <p>
-            • Machine Learning for All –{" "}
-            <span className="tech">University of London</span>, Coursera, Dec
-            2021
-            <br />• Managing ML Projects –{" "}
-            <span className="tech">Google Cloud</span>, Coursera, Jan 2022
-            <br />• ML with Python – <span className="tech">IBM</span>,
-            Coursera, Feb 2022
-            <br />• Deep Learning CV –{" "}
-            <span className="tech">University of Colorado</span>, Coursera, Feb
-            2022
-            <br />• Intro to CV & Image Processing –{" "}
-            <span className="tech">IBM</span>, Coursera, Mar 2022
-            <br />• Predicting Safety Stock –{" "}
-            <span className="tech">LearnQuest</span>, Coursera, Mar 2022
-          </p>
+        <div className="achievement-card animate-delay-2">
+          <div className="card-header">
+            <span className="icon">📜</span>
+            <h3>Certifications</h3>
+          </div>
+          <ul>
+            <li>
+              Machine Learning for All{" "}
+              <span className="tag">University of London</span>, Coursera, Dec
+              2021
+            </li>
+            <li>
+              Managing ML Projects <span className="tag">Google Cloud</span>,
+              Coursera, Jan 2022
+            </li>
+            <li>
+              ML with Python <span className="tag">IBM</span>, Coursera, Feb
+              2022
+            </li>
+            <li>
+              Deep Learning CV{" "}
+              <span className="tag">University of Colorado</span>, Coursera, Feb
+              2022
+            </li>
+            <li>
+              Intro to CV & Image Processing <span className="tag">IBM</span>,
+              Coursera, Mar 2022
+            </li>
+            <li>
+              Predicting Safety Stock <span className="tag">LearnQuest</span>,
+              Coursera, Mar 2022
+            </li>
+          </ul>
         </div>
 
-        <div className="section-card animate-delay-3">
-          <h3>🏆 Hackathons & Leadership</h3>
-          <p>
-            • Co-Head Publicity – <span className="tech">DJSCE ACM</span>: Led
-            campaigns, hosted hackathons, formed partnerships, and scaled reach
-            across 5+ colleges.
-            <br />• Participated – Hackathons like{" "}
-            <span className="tech">Lines of Code 4.0</span>,{" "}
-            <span className="tech">Stratagem 2023</span>,{" "}
-            <span className="tech">Smart India Hackathon - 2023</span> ,
-            showcasing tech creativity and impact.
-            <br />• Developer –{" "}
-            <span className="tech">e-Designs & e-GI Challenge</span>: Created
-            web and mobile portal for Intellectual Property Office of India.
-          </p>
+        <div className="achievement-card animate-delay-3">
+          <div className="card-header">
+            <span className="icon">🏆</span>
+            <h3>Hackathons & Leadership</h3>
+          </div>
+          <ul>
+            <li>
+              Co-Head Publicity <span className="tag">DJSCE ACM</span>: Led
+              campaigns, hosted hackathons, formed partnerships, and scaled
+              reach across 5+ colleges.
+            </li>
+            <li>
+              Participated in <span className="tag">Lines of Code 4.0</span>,{" "}
+              <span className="tag">Stratagem 2023</span>,{" "}
+              <span className="tag">Smart India Hackathon - 2023</span>
+            </li>
+            <li>
+              Developer –{" "}
+              <span className="tag">e-Designs & e-GI Challenge</span>: Created
+              web and mobile portal for Intellectual Property Office of India.
+            </li>
+          </ul>
         </div>
       </div>
     </div>

@@ -7,6 +7,7 @@ import Projects from "./pages/Projects";
 import Publications from "./pages/Publications";
 import Contact from "./pages/Contact";
 import "./App.css";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/publications" element={<Publications />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );

@@ -108,23 +108,59 @@ export default function Home() {
         </motion.div>
       </div>
 
-      <h2 className="what-i-do fade-on-scroll">What I Do</h2>
+      <h2 className="section-title">What I Do</h2>
 
-      <div className="cards-section">
-        {skills.map((skill, index) => (
-          <motion.div
-            key={index}
-            ref={(el) => (skillRefs.current[index] = el)}
-            className="skill-card"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.2, duration: 0.6 }}
-          >
-            <span className="icon">{skill.icon}</span>
-            <h3>{skill.title}</h3>
-            <p>{skill.desc}</p>
-          </motion.div>
-        ))}
+      <div className="what-i-do-section">
+        <div className="what-i-do-left">
+          {skills.map((skill, index) => (
+            <motion.div
+              key={index}
+              ref={(el) => (skillRefs.current[index] = el)}
+              className="skill-card"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.2, duration: 0.6 }}
+            >
+              <span className="icon">{skill.icon}</span>
+              <h3>{skill.title}</h3>
+              <p>{skill.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+
+        <div className="what-i-do-right">
+          <div className="tech-stack-container">
+            <h2 className="section-title">🚀 Tech Stack</h2>
+            <div className="tech-grid">
+              <div>
+                <h3 className="tech-category">🧠 Languages</h3>
+                <p>Python, JavaScript, TypeScript, C++, Java, SQL, HTML, CSS</p>
+              </div>
+              <div>
+                <h3 className="tech-category">🗄️ Databases</h3>
+                <p>MySQL, MongoDB, PostgreSQL, SQLite</p>
+              </div>
+              <div>
+                <h3 className="tech-category">🧩 Frameworks</h3>
+                <p>
+                  React, React Native, Django, Node, Redux, Ruby on Rails, REST
+                  APIs
+                </p>
+              </div>
+              <div>
+                <h3 className="tech-category">🛠️ Tools</h3>
+                <p>Git, GitHub, AWS, Docker, Firebase, Figma</p>
+              </div>
+              <div className="full-width">
+                <h3 className="tech-category">📚 Libraries</h3>
+                <p>
+                  Scikit-learn, TensorFlow, Keras, OpenCV, PyTorch, Matplotlib,
+                  NumPy, Pandas
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

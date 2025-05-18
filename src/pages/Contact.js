@@ -1,8 +1,25 @@
 // src/pages/Contact.js
 import "../pages/Home.css";
 import profilePic from "../assets/ananya-photo.png";
+import { useState } from "react";
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    window.location.href = `mailto:doshiananya2002@gmail.com?subject=New Inquiry from ${formData.name}&body=${formData.message}%0A%0AContact Email: ${formData.email}`;
+  };
+
   return (
     <div className="contact">
       <h2 className="section-title">Let’s Connect</h2>
@@ -23,22 +40,38 @@ export default function Contact() {
         <div className="section-card animate-delay-2">
           <h3>📬 Get in Touch</h3>
           <p>
-            Curious about my work or want to collaborate?
-            <br />
-            <br />
-            <strong>Email:</strong>{" "}
-            <a
-              href="mailto:doshiananya2002@gmail.com"
-              style={{ color: "#00bcd4" }}
-            >
-              doshiananya2002@gmail.com
-            </a>
-            <br />
-            <strong>Phone:</strong>{" "}
-            <a href="tel:+19195207478" style={{ color: "#00bcd4" }}>
-              +1 (919) 520-7478
-            </a>
+            Curious about my work or want to collaborate? Fill out the form
+            below:
           </p>
+          <form onSubmit={handleSubmit} className="contact-form">
+            <div className="form-row">
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              value={formData.message}
+              onChange={handleChange}
+              rows="5"
+              required
+            ></textarea>
+            <button type="submit">Send Message</button>
+          </form>
         </div>
 
         <div className="section-card animate-delay-3">
