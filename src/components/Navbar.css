@@ -52,7 +52,7 @@
   left: 0;
   height: 2px;
   width: 0%;
-  background: #007bff;
+  background: #00bcd4;
   transition: width 0.3s ease;
 }
 
@@ -61,7 +61,7 @@
 }
 
 .nav-links a:hover {
-  color: #007bff;
+  color: #00bcd4;
 }
 
 /* Hamburger Menu */

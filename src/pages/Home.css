@@ -21,7 +21,7 @@ body, html {
 
 .contact, .projects, .publications, .education, .experience, .home {
   background-color: #0f0f0f;
-  padding: 60px 20px;
+  padding: 40px 20px;
   width: 100%;
   box-sizing: border-box;
   min-height: 100vh;
@@ -30,7 +30,7 @@ body, html {
 .section-title {
   font-size: 2rem;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   color: #fff;
 }
 
@@ -84,7 +84,7 @@ body, html {
   
 .contact, .projects, .publications, .education, .experience, .home {
   background-color: #0f0f0f;
-  padding: 60px 20px;
+  padding: 40px 20px;
   width: 100%;
   box-sizing: border-box;
   min-height: 100vh;
@@ -94,7 +94,7 @@ body, html {
 .section-title {
   font-size: 2rem;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   color: #fff;
 }
 
@@ -201,7 +201,7 @@ body, html {
   }
   
   .linkedin {
-    background: #0077ff;
+    background: #00bcd4;
     color: white;
     border: none;
   }
@@ -211,7 +211,20 @@ body, html {
   }
   
   .linkedin:hover {
-    background: #005ecb;
+    background: #009bad;
+  }
+
+  .resume {
+    background: linear-gradient(135deg, #00bcd4 0%, #00bcd4 100%);
+    color: #000;
+    border: none;
+    font-weight: 600;
+  }
+
+  .resume:hover {
+    background: linear-gradient(135deg, #009bad 0%, #009bad 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 188, 212, 0.3);
   }
   
   .what-i-do {
@@ -264,6 +277,166 @@ body, html {
     display: block;
     margin-bottom: 10px;
   }
+
+/* New Summary Card Styles */
+.summary-card {
+  background: transparent;
+  padding: 30px 0;
+  border-radius: 0;
+  width: 100%;
+  text-align: center;
+  box-shadow: none;
+  transition: none;
+  border: none;
+  height: fit-content;
+}
+
+.summary-card:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.summary-content h3 {
+  font-size: 1.8rem;
+  color: #00bcd4;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.summary-content p {
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+/* Tech Stack Modern Design */
+.tech-stack-container {
+  height: fit-content;
+  padding: 30px 0;
+}
+
+.tech-showcase {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tech-category-modern {
+  margin-bottom: 20px;
+}
+
+.category-title {
+  font-size: 1.1rem;
+  color: #00bcd4;
+  margin-bottom: 12px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.tech-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tech-pill {
+  background: transparent;
+  color: #ccc;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 400;
+  border: 1px solid #333;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.tech-pill:hover {
+  background: linear-gradient(135deg, #00bcd4 0%, #00bcd4 100%);
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 188, 212, 0.3);
+}
+
+/* Project Links Styling */
+.project-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.project-links a {
+  color: #00bcd4;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 6px 12px;
+  border: 1px solid #00bcd4;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+.project-links a:hover {
+  background: #00bcd4;
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 188, 212, 0.3);
+}
+
+/* Responsive Styles for New Components */
+@media (max-width: 768px) {
+  .what-i-do-section {
+    flex-direction: column;
+  }
+
+  .summary-card {
+    padding: 30px 20px;
+  }
+
+  .summary-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .summary-content p {
+    font-size: 0.95rem;
+  }
+
+  .tech-pills {
+    gap: 8px;
+  }
+
+  .tech-pill {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+
+  .category-title {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .summary-card {
+    padding: 25px 15px;
+  }
+
+  .summary-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .summary-content p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .tech-pill {
+    padding: 5px 10px;
+    font-size: 0.75rem;
+  }
+}
 
 
   .animate-delay-1 {
@@ -632,9 +805,9 @@ body, html {
   }
   
   .hero-buttons a:nth-child(2) {
-    background-color: #007bff;
-    color: #fff;
-  }
+  background-color: #00bcd4;
+  color: #fff;
+}
   
   .hero-buttons a:hover {
     opacity: 0.8;
@@ -823,15 +996,15 @@ body, html {
 } */
 
 
-.resume {
-  background: #57beea;
-  color: #fff;
-  border: none;
-}
+  .resume {
+    background: #00bcd4;
+    color: #fff;
+    border: none;
+  }
 
-.resume:hover {
-  background: #329ba6;
-}
+  .resume:hover {
+    background: #009bad;
+  }
 
 
 
@@ -841,7 +1014,7 @@ body, html {
   position: relative;
   margin: 60px auto;
   padding-left: 30px;
-  border-left: 3px solid #6c63ff;
+  border-left: 3px solid #00bcd4;
   max-width: 900px;
 }
 
@@ -858,14 +1031,14 @@ body, html {
   top: 0;
   width: 28px;
   height: 28px;
-  background-color: #6c63ff;
+  background-color: #00bcd4;
   color: #fff;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.1rem;
-  box-shadow: 0 0 12px rgba(108, 99, 255, 0.6);
+  box-shadow: 0 0 12px rgba(0, 188, 212, 0.6);
   z-index: 2;
 }
 
@@ -959,27 +1132,25 @@ body, html {
 
 .what-i-do-section {
   display: flex;
-  gap: 60px;
+  flex-direction: column;
+  gap: 40px;
   justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  margin-bottom: 60px;
+  align-items: center;
+  margin-bottom: 40px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.what-i-do-left {
-  flex: 1;
-  min-width: 300px;
-}
-
-.what-i-do-right {
-  flex: 1;
+.summary-section {
   width: 100%;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.936);
-  padding: 30px;
-  border-radius: 14px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-  margin-top: 30px;
+  max-width: 800px;
+  text-align: center;
+}
+
+.tech-stack-section {
+  width: 100%;
+  max-width: 1000px;
 }
 
 /* Skills Section in What I Do */
@@ -1269,8 +1440,8 @@ body, html {
 
 .tag {
   font-weight: 600;
-  color: #00e0ff;
-  background: rgba(0, 224, 255, 0.1);
+  color: #00bcd4;
+  background: rgba(0, 188, 212, 0.1);
   padding: 2px 8px;
   border-radius: 6px;
   margin-left: 6px;

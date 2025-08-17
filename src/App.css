@@ -1,38 +1,183 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+/* App Layout */
+.app {
+  display: flex;
   min-height: 100vh;
+  background-color: #0f0f0f;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Sidebar Navigation */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 280px;
+  height: 100vh;
+  background: #0f0f0f;
+  border-right: 1px solid #1a1a1a;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.sidebar-content {
+  padding: 40px 30px;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.logo h2 {
+  color: #fff;
+  font-size: 1.8rem;
+  margin: 0;
+  font-weight: 700;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.logo p {
+  color: #00bcd4;
+  font-size: 0.9rem;
+  margin: 5px 0 0 0;
+  opacity: 0.8;
+}
+
+.nav-menu {
+  list-style: none;
+  padding: 0;
+  margin: 40px 0;
+  flex-grow: 1;
+}
+
+.nav-menu li {
+  margin-bottom: 8px;
+}
+
+.nav-menu button {
+  width: 100%;
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 1rem;
+  padding: 15px 20px;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 0;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-menu button:hover {
+  color: #00bcd4;
+  transform: translateX(5px);
+}
+
+.nav-menu button.active {
+  color: #00bcd4;
+  font-weight: 600;
+  border-bottom: 2px solid #00bcd4;
+}
+
+.contact-info {
+  border-top: 1px solid #333;
+  padding-top: 20px;
+}
+
+.contact-info p {
+  color: #ccc;
+  font-size: 0.85rem;
+  margin: 8px 0;
+}
+
+.contact-info a {
+  color: #00bcd4;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: #00bcd4;
+  text-decoration: underline;
+}
+
+/* Main Content */
+.main-content {
+  margin-left: 280px;
+  width: calc(100% - 280px);
+  min-height: 100vh;
+}
+
+.main-content section {
+  width: 100%;
+  padding: 0;
+  scroll-margin-top: 20px;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    border-right: none;
+    border-bottom: 1px solid #333;
   }
-  to {
-    transform: rotate(360deg);
+
+  .sidebar-content {
+    padding: 20px;
+    height: auto;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+  }
+
+  .nav-menu li {
+    margin-bottom: 0;
+  }
+
+  .nav-menu button {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .main-content section {
+    padding: 20px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar-content {
+    padding: 15px;
+  }
+
+  .logo h2 {
+    font-size: 1.5rem;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+  }
+
+  .nav-menu button {
+    font-size: 0.85rem;
   }
 }

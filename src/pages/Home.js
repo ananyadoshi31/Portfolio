@@ -36,23 +36,39 @@ export default function Home() {
     });
   }, []);
 
-  const skills = [
-    {
-      icon: "🌐",
-      title: "Website Development",
-      desc: "I design and develop full-stack, responsive websites — from sketching intuitive UIs to writing clean, efficient frontend and backend code. Beyond just building, I focus on optimizing performance, integrating APIs, writing robust tests, and deploying to scale. My stack includes React, Next.js, Django, Flask, Ruby on Rails, Python, TypeScript, and JavaScript.",
-    },
-    {
-      icon: "📱",
-      title: "Mobile App Development",
-      desc: "I'm passionate about crafting cross-platform mobile apps for both Android and iOS. From building dynamic components and integrating seamless SDKs to implementing pagination and reducing API load times — I’ve handled it all. I typically use React Native for frontend and Firebase for backend, with Redux managing the state behind the scenes.",
-    },
-    {
-      icon: "🧠",
-      title: "Machine Learning",
-      desc: "I thrive on solving real-world problems through data — from prediction and classification to anomaly detection and generative AI. My work spans computer vision, transfer learning, and recommendation systems. I’m fluent in TensorFlow, Keras, PyTorch, OpenCV, scikit-learn, NumPy, and Pandas.",
-    },
-  ];
+  const techStacks = {
+    languages: [
+      "Python",
+      "JavaScript",
+      "TypeScript",
+      "C++",
+      "Java",
+      "SQL",
+      "HTML",
+      "CSS",
+    ],
+    databases: ["MySQL", "MongoDB", "PostgreSQL", "SQLite"],
+    frameworks: [
+      "React",
+      "React Native",
+      "Django",
+      "Node.js",
+      "Redux",
+      "Ruby on Rails",
+      "REST APIs",
+    ],
+    tools: ["Git", "GitHub", "AWS", "Docker", "Firebase", "Figma"],
+    libraries: [
+      "Scikit-learn",
+      "TensorFlow",
+      "Keras",
+      "OpenCV",
+      "PyTorch",
+      "Matplotlib",
+      "NumPy",
+      "Pandas",
+    ],
+  };
 
   return (
     <div className="home">
@@ -108,56 +124,64 @@ export default function Home() {
         </motion.div>
       </div>
 
-      <h2 className="section-title">What I Do</h2>
-
       <div className="what-i-do-section">
-        <div className="what-i-do-left">
-          {skills.map((skill, index) => (
-            <motion.div
-              key={index}
-              ref={(el) => (skillRefs.current[index] = el)}
-              className="skill-card"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.2, duration: 0.6 }}
-            >
-              <span className="icon">{skill.icon}</span>
-              <h3>{skill.title}</h3>
-              <p>{skill.desc}</p>
-            </motion.div>
-          ))}
+        <div className="summary-section">
+          <motion.div
+            className="summary-card"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="summary-content">
+              <h3>Full-Stack Developer & AI Enthusiast</h3>
+              <p style={{ fontSize: "1.8rem" }}>
+                A passionate developer with expertise in building scalable web
+                applications, mobile apps, and intelligent ML systems.
+                Proficient in optimizing performance, integrating APIs, and
+                delivering seamless user experiences from concept to deployment.
+              </p>
+            </div>
+          </motion.div>
         </div>
 
-        <div className="what-i-do-right">
+        <div className="tech-stack-section">
           <div className="tech-stack-container">
             <h2 className="section-title">🚀 Tech Stack</h2>
-            <div className="tech-grid">
-              <div>
-                <h3 className="tech-category">🧠 Languages</h3>
-                <p>Python, JavaScript, TypeScript, C++, Java, SQL, HTML, CSS</p>
-              </div>
-              <div>
-                <h3 className="tech-category">🗄️ Databases</h3>
-                <p>MySQL, MongoDB, PostgreSQL, SQLite</p>
-              </div>
-              <div>
-                <h3 className="tech-category">🧩 Frameworks</h3>
-                <p>
-                  React, React Native, Django, Node, Redux, Ruby on Rails, REST
-                  APIs
-                </p>
-              </div>
-              <div>
-                <h3 className="tech-category">🛠️ Tools</h3>
-                <p>Git, GitHub, AWS, Docker, Firebase, Figma</p>
-              </div>
-              <div className="full-width">
-                <h3 className="tech-category">📚 Libraries</h3>
-                <p>
-                  Scikit-learn, TensorFlow, Keras, OpenCV, PyTorch, Matplotlib,
-                  NumPy, Pandas
-                </p>
-              </div>
+            <div className="tech-showcase">
+              {Object.entries(techStacks).map(([category, items], index) => (
+                <motion.div
+                  key={category}
+                  className="tech-category-modern"
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.1, duration: 0.6 }}
+                >
+                  <h3 className="category-title">
+                    {category === "languages" && "💻 Languages"}
+                    {category === "databases" && "🗄️ Databases"}
+                    {category === "frameworks" && "🧩 Frameworks"}
+                    {category === "tools" && "🛠️ Tools"}
+                    {category === "libraries" && "📚 Libraries"}
+                  </h3>
+                  <div className="tech-pills">
+                    {items.map((tech, techIndex) => (
+                      <motion.span
+                        key={tech}
+                        className="tech-pill"
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{
+                          delay: index * 0.1 + techIndex * 0.05,
+                          duration: 0.4,
+                        }}
+                        whileHover={{ scale: 1.05, backgroundColor: "#00bcd4" }}
+                      >
+                        {tech}
+                      </motion.span>
+                    ))}
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </div>
         </div>

@@ -72,6 +72,20 @@ export default function Publications() {
 
         <div className="achievement-card animate-delay-3">
           <div className="card-header">
+            <span className="icon">🎓</span>
+            <h3>Teaching & Mentorship</h3>
+          </div>
+          <ul>
+            <li>
+              Teaching Assistant – Software Engineering{" "}
+              <span className="tag">NC State University</span> (May 2025 – July
+              2025)
+            </li>
+          </ul>
+        </div>
+
+        <div className="achievement-card animate-delay-4">
+          <div className="card-header">
             <span className="icon">🏆</span>
             <h3>Hackathons & Leadership</h3>
           </div>

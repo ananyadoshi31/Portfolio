@@ -21,6 +21,22 @@ export default function Projects() {
               <span className="tech">360° camera scanner</span> and a
               dynamically generated report — all within 40 seconds.
             </p>
+            <div className="project-links">
+              <a
+                href="https://drive.google.com/file/d/11OwozyLaZOt9LC4dlffRQp_HQntmBSo5/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Demo Video
+              </a>
+              <a
+                href="https://github.com/Vansh17/PikFresh_expo/tree/master"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
+            </div>
           </div>
         </div>
 
@@ -37,6 +53,22 @@ export default function Projects() {
               and a personalized engine using <span className="tech">SVD</span>.
               Users see the top 5 matches based on mood, meals, and math.
             </p>
+            <div className="project-links">
+              <a
+                href="https://drive.google.com/file/d/1N-Hc77zP3K_tqxndj9b7NQAycRgtF-u7/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Demo Video
+              </a>
+              <a
+                href="https://github.com/ananyadoshi31/food_surplus-master"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
+            </div>
           </div>
         </div>
 
@@ -54,6 +86,15 @@ export default function Projects() {
               all backed by a strong <span className="tech">SQLite</span>{" "}
               database.
             </p>
+            <div className="project-links">
+              <a
+                href="https://github.ncsu.edu/avdoshi/CSC_ECE_517_Program2_Copy/tree/master"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
+            </div>
           </div>
         </div>
 
@@ -66,10 +107,19 @@ export default function Projects() {
               fabrics — powered by <span className="tech">CNNs</span>,{" "}
               <span className="tech">ResNet50</span>,{" "}
               <span className="tech">VGG16</span>, and{" "}
-              <span className="tech">Autoencoders</span>. It doesn’t just detect
+              <span className="tech">Autoencoders</span>. It doesn't just detect
               fabric flaws, it reconstructs them. Trained on 80,000+ images and
               tested with custom pixel-level datasets.
             </p>
+            <div className="project-links">
+              <a
+                href="https://github.com/ananyadoshi31/Textile_Defect_Detection_BEPROJECT"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
+            </div>
           </div>
         </div>
 
@@ -86,6 +136,22 @@ export default function Projects() {
               <span className="tech">Yup</span>-validated auth. Over 70% users
               preferred its smooth UX over other clones.
             </p>
+            <div className="project-links">
+              <a
+                href="https://drive.google.com/file/d/1Y6qpyz3WmfYH_8gH8G7OrvZuxLRruCFm/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Demo Video
+              </a>
+              <a
+                href="https://github.com/ananyadoshi31/SocialMediaApp"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
+            </div>
           </div>
         </div>
 

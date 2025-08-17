@@ -95,7 +95,14 @@
 //     </div>
 //   );
 // }
-import { FaCode, FaReact, FaLaptopCode, FaHandsHelping } from "react-icons/fa";
+import {
+  FaCode,
+  FaReact,
+  FaLaptopCode,
+  FaHandsHelping,
+  FaMobile,
+  FaDatabase,
+} from "react-icons/fa";
 import "../pages/Home.css";
 
 export default function Experience() {
@@ -105,10 +112,59 @@ export default function Experience() {
       <div className="timeline">
         <div className="timeline-item">
           <div className="timeline-icon">
+            <FaMobile />
+          </div>
+          <div className="timeline-card">
+            <h3>Everything Parlays</h3>
+            <p>
+              <strong>Role:</strong> Software Engineer Intern (May 2025 –
+              Present)
+            </p>
+            <p>
+              – Delivering production-ready features for an iOS app with React
+              Native, increasing user engagement by 26%.
+              <br />
+              – Implementing scalable backend services with MongoDB and AWS CDK,
+              decreasing average API response times by 15%.
+              <br />
+              – Designing and optimizing event-driven architecture for real-time
+              notification system, supporting 5,000+ concurrent users.
+              <br />– Automating CI/CD workflows with GitHub actions,
+              accelerating release velocity by 33%.
+            </p>
+          </div>
+        </div>
+
+        <div className="timeline-item">
+          <div className="timeline-icon">
+            <FaDatabase />
+          </div>
+          <div className="timeline-card">
+            <h3>
+              NC State University, Department of Forestry and Environmental
+              Resources
+            </h3>
+            <p>
+              <strong>Role:</strong> Research Assistant (May 2025 – July 2025)
+            </p>
+            <p>
+              – Built and optimized ML pipelines to predict water quality
+              indicators with up to 12% accuracy improvement.
+              <br />
+              – Applied cloud-based tools and distributed computing principles
+              to support large datasets, enhance processing speed by 8%.
+              <br />– Implemented data ingestion and visualization pipelines to
+              enable actionable insights for decision-making.
+            </p>
+          </div>
+        </div>
+
+        <div className="timeline-item">
+          <div className="timeline-icon">
             <FaCode />
           </div>
           <div className="timeline-card">
-            <h3>Open Source Project</h3>
+            <h3>Expertiza (Open-Source Project)</h3>
             <p>
               <strong>Role:</strong> Backend Developer (Feb 2025 – Apr 2025)
             </p>
@@ -122,6 +178,36 @@ export default function Experience() {
               – Conducted model/controller testing with 95% coverage.
               <br />– Documented backend architecture in Expertiza Wiki.
             </p>
+            <div className="project-links">
+              <a
+                href="https://github.com/expertiza/reimplementation-back-end/pull/162"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub PR #162
+              </a>
+              <a
+                href="https://github.com/expertiza/reimplementation-back-end/pull/193"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub PR #193
+              </a>
+              <a
+                href="https://github.com/valorant-dhruv/reimplementation-back-end"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub Repository
+              </a>
+              <a
+                href="https://wiki.expertiza.ncsu.edu/index.php?title=CSC/ECE_517_Spring_2025_E2515:_Reimplement_student_teams_controller.rb"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Design Documentation
+              </a>
+            </div>
           </div>
         </div>
 
