@@ -51,7 +51,9 @@ export default function Home() {
     frameworks: [
       "React",
       "React Native",
+      "Next.js",
       "Django",
+      ".NET",
       "Node.js",
       "Redux",
       "Ruby on Rails",
@@ -113,7 +115,7 @@ export default function Home() {
               LinkedIn
             </a>
             <a
-              href="https://drive.google.com/uc?export=download&id=1JYffvMwPXlJsm-5mtChLGzFVifpAop8T"
+              href="https://drive.google.com/file/d/1aREc-xnvABeh2piOJL11nAOxaEKvLr_e/view?usp=sharing"
               className="btn resume"
               target="_blank"
               rel="noreferrer"

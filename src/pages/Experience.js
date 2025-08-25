@@ -112,13 +112,36 @@ export default function Experience() {
       <div className="timeline">
         <div className="timeline-item">
           <div className="timeline-icon">
+            <FaLaptopCode />
+          </div>
+          <div className="timeline-card">
+            <h3>ReFiBuy AI</h3>
+            <p>
+              <strong>Role:</strong> Software Engineer Intern (Aug 2025 – Jan
+              2026)
+            </p>
+            <p>
+              – Spearheaded prompt engineering in Langfuse for Agentic AI
+              product scoring, enabling adaptive decision-making across diverse
+              e-commerce sources, reducing catalog enrichment time by 20%.
+              <br />
+              – Built user interfaces in Next.js, integrating with .NET APIs,
+              enabling processing of 100K products daily.
+              <br />– Optimized PostgreSQL queries and deployed scalable
+              solutions on Azure with 100% uptime in production.
+            </p>
+          </div>
+        </div>
+
+        <div className="timeline-item">
+          <div className="timeline-icon">
             <FaMobile />
           </div>
           <div className="timeline-card">
             <h3>Everything Parlays</h3>
             <p>
-              <strong>Role:</strong> Software Engineer Intern (May 2025 –
-              Present)
+              <strong>Role:</strong> Software Engineer Intern (June 2025 – Aug
+              2025)
             </p>
             <p>
               – Delivering production-ready features for an iOS app with React
@@ -179,20 +202,6 @@ export default function Experience() {
               <br />– Documented backend architecture in Expertiza Wiki.
             </p>
             <div className="project-links">
-              <a
-                href="https://github.com/expertiza/reimplementation-back-end/pull/162"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                GitHub PR #162
-              </a>
-              <a
-                href="https://github.com/expertiza/reimplementation-back-end/pull/193"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                GitHub PR #193
-              </a>
               <a
                 href="https://github.com/valorant-dhruv/reimplementation-back-end"
                 target="_blank"

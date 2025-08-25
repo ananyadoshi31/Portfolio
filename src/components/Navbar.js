@@ -10,7 +10,10 @@ function Navbar() {
     <nav className="navbar">
       <div className="nav-logo"></div>
 
-      <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+      <div
+        className={`menu-toggle ${menuOpen ? "active" : ""}`}
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
         <span></span>
         <span></span>
         <span></span>

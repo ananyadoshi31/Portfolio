@@ -153,16 +153,19 @@ body, html {
     gap: 50px;
     max-width: 1200px;
     margin: 0 auto 80px auto;
+    padding: 0 20px;
   }
   
   .hero-left {
     flex: 1;
     display: flex;
     justify-content: center;
+    min-width: 300px;
   }
   
   .hero-image {
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     height: auto;
     animation: fadeInUp 1s ease forwards;
   }
@@ -171,6 +174,7 @@ body, html {
     flex: 1;
     text-align: left;
     animation: fadeInUp 1.2s ease forwards;
+    min-width: 300px;
   }
   
   .hero-title {
@@ -183,6 +187,7 @@ body, html {
   .hero-buttons {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
   }
   
   .btn {
@@ -192,6 +197,7 @@ body, html {
     text-decoration: none;
     font-weight: 500;
     transition: all 0.3s ease;
+    white-space: nowrap;
   }
   
   .github {
@@ -1140,6 +1146,7 @@ body, html {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 20px;
 }
 
 .summary-section {
@@ -1332,6 +1339,20 @@ body, html {
     font-size: 0.85rem;
     padding: 20px 10px;
   }
+  
+  /* Education page tablet improvements */
+  .education .section-card > div:first-child {
+    gap: 15px;
+  }
+  
+  .education .section-card img {
+    width: 55px;
+    height: 55px;
+  }
+  
+  .education .section-card h3 {
+    font-size: 1.2rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1343,6 +1364,28 @@ body, html {
   .footer a {
     display: block;
     margin: 8px 0;
+  }
+  
+  /* Education page mobile improvements */
+  .education .section-card > div:first-child {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .education .section-card img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .education .section-card h3 {
+    min-width: auto;
+    font-size: 1.1rem;
+  }
+  
+  .education .section-card p {
+    font-size: 0.9rem;
+    text-align: left;
   }
 }
 
@@ -1524,5 +1567,388 @@ body, html {
 
   .contact-form button {
     width: 100%;
+  }
+}
+
+/* === Responsive Design Improvements === */
+
+/* Education page responsive improvements */
+.education .section-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education .section-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.education .section-card > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.education .section-card img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 5px;
+}
+
+.education .section-card h3 {
+  margin: 0;
+  flex: 1;
+  min-width: 200px;
+}
+
+.education .section-card p {
+  margin-top: 15px;
+  line-height: 1.7;
+}
+
+/* Large Desktop */
+@media (min-width: 1200px) {
+  .hero-section {
+    gap: 80px;
+  }
+  
+  .hero-title {
+    font-size: 4rem;
+  }
+  
+  .hero-image {
+    max-width: 450px;
+  }
+}
+
+/* Desktop */
+@media (max-width: 1199px) and (min-width: 769px) {
+  .hero-section {
+    gap: 40px;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+  }
+  
+  .hero-image {
+    max-width: 350px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    margin-bottom: 60px;
+  }
+
+  .hero-left,
+  .hero-right {
+    flex: none;
+    width: 100%;
+    min-width: auto;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+
+  .hero-image {
+    max-width: 280px;
+    margin-bottom: 20px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .what-i-do-section {
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 15px;
+  }
+
+  .summary-card {
+    padding: 20px 15px;
+  }
+
+  .summary-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .summary-content p {
+    font-size: 0.95rem;
+  }
+
+  .tech-pills {
+    gap: 8px;
+  }
+
+  .tech-pill {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+
+  .category-title {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .section-card {
+    padding: 20px 15px;
+  }
+
+  .project-row {
+    flex-direction: column !important;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .project-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .project-desc {
+    padding: 20px;
+  }
+
+  .project-desc h3 {
+    font-size: 1.3rem;
+  }
+
+  .project-desc p {
+    font-size: 0.95rem;
+  }
+
+  .timeline {
+    padding-left: 20px;
+  }
+
+  .timeline-icon {
+    left: -30px;
+  }
+
+  .timeline-card {
+    padding: 18px 20px;
+  }
+
+  .achievement-card {
+    padding: 20px;
+  }
+
+  .card-header .icon {
+    font-size: 1.5rem;
+  }
+
+  .achievement-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .tag {
+    font-size: 0.75rem;
+  }
+
+  .contact-form .form-row {
+    flex-direction: column;
+  }
+
+  .contact-form button {
+    width: 100%;
+  }
+
+  .footer {
+    font-size: 0.85rem;
+    padding: 20px 10px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-image {
+    max-width: 220px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .btn {
+    width: 200px;
+    text-align: center;
+  }
+
+  .summary-card {
+    padding: 15px 10px;
+  }
+
+  .summary-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .summary-content p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .tech-pill {
+    padding: 4px 8px;
+    font-size: 0.75rem;
+  }
+
+  .section-title {
+    font-size: 1.3rem;
+  }
+
+  .section-card {
+    padding: 15px 10px;
+  }
+
+  .project-desc {
+    padding: 15px;
+  }
+
+  .project-desc h3 {
+    font-size: 1.1rem;
+  }
+
+  .project-desc p {
+    font-size: 0.9rem;
+  }
+
+  .project-links {
+    justify-content: center;
+  }
+
+  .project-links a {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+
+  .timeline-card {
+    padding: 15px;
+  }
+
+  .timeline-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .timeline-card p {
+    font-size: 0.9rem;
+  }
+
+  .achievement-card {
+    padding: 15px;
+  }
+
+  .achievement-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .achievement-card li {
+    font-size: 0.9rem;
+  }
+
+  .footer a {
+    display: block;
+    margin: 8px 0;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 360px) {
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-image {
+    max-width: 180px;
+  }
+
+  .btn {
+    width: 180px;
+    font-size: 0.85rem;
+    padding: 8px 16px;
+  }
+
+  .summary-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .summary-content p {
+    font-size: 0.85rem;
+  }
+
+  .tech-pill {
+    font-size: 0.7rem;
+    padding: 3px 6px;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+  }
+}
+
+/* Landscape Mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero-section {
+    margin-bottom: 40px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  .hero-image {
+    max-width: 200px;
+  }
+
+  .what-i-do-section {
+    gap: 20px;
+  }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .hero-image {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .hero-section,
+  .what-i-do-section {
+    break-inside: avoid;
+  }
+
+  .section-card {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #ccc;
   }
 }

@@ -17,6 +17,7 @@
   border-right: 1px solid #1a1a1a;
   z-index: 1000;
   overflow-y: auto;
+  transition: transform 0.3s ease;
 }
 
 .sidebar-content {
@@ -120,13 +121,42 @@ html {
 }
 
 /* Mobile Responsive */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 250px;
+  }
+  
+  .main-content {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+  }
+  
+  .sidebar-content {
+    padding: 30px 20px;
+  }
+  
+  .logo h2 {
+    font-size: 1.6rem;
+  }
+  
+  .nav-menu button {
+    padding: 12px 15px;
+    font-size: 0.95rem;
+  }
+}
+
 @media (max-width: 768px) {
+  .app {
+    flex-direction: column;
+  }
+  
   .sidebar {
     width: 100%;
     height: auto;
     position: relative;
     border-right: none;
     border-bottom: 1px solid #333;
+    transform: none;
   }
 
   .sidebar-content {
@@ -139,6 +169,7 @@ html {
     flex-wrap: wrap;
     gap: 10px;
     margin: 20px 0;
+    justify-content: center;
   }
 
   .nav-menu li {
@@ -148,10 +179,34 @@ html {
   .nav-menu button {
     padding: 10px 15px;
     font-size: 0.9rem;
+    border-radius: 6px;
+    border: 1px solid #333;
+    background: #1a1a1a;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-menu button:hover {
+    transform: translateY(-2px);
+    border-color: #00bcd4;
+  }
+  
+  .nav-menu button.active {
+    background: #00bcd4;
+    color: #000;
+    border-color: #00bcd4;
+    border-bottom: 2px solid #00bcd4;
   }
 
   .contact-info {
     text-align: center;
+    border-top: 1px solid #333;
+    padding-top: 15px;
+    margin-top: 15px;
+  }
+  
+  .contact-info p {
+    font-size: 0.8rem;
+    margin: 5px 0;
   }
 
   .main-content {
@@ -170,14 +225,102 @@ html {
   }
 
   .logo h2 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+  }
+  
+  .logo p {
+    font-size: 0.8rem;
   }
 
   .nav-menu {
     flex-direction: column;
+    gap: 5px;
   }
 
   .nav-menu button {
     font-size: 0.85rem;
+    padding: 8px 12px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .contact-info p {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .sidebar-content {
+    padding: 10px;
+  }
+  
+  .logo h2 {
+    font-size: 1.3rem;
+  }
+  
+  .nav-menu button {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+  
+  .contact-info p {
+    font-size: 0.7rem;
+  }
+}
+
+/* Landscape orientation adjustments */
+@media (max-height: 500px) and (orientation: landscape) {
+  .sidebar {
+    height: auto;
+    position: relative;
+  }
+  
+  .sidebar-content {
+    padding: 15px 20px;
+  }
+  
+  .nav-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 15px 0;
+  }
+  
+  .nav-menu button {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+  
+  .contact-info {
+    padding-top: 10px;
+    margin-top: 10px;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .sidebar {
+    border-right-width: 0.5px;
+  }
+}
+
+/* Print styles */
+@media print {
+  .sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #000;
+  }
+  
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+  
+  .nav-menu {
+    display: flex;
+    flex-wrap: wrap;
   }
 }
