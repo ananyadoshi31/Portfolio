@@ -77,6 +77,10 @@ export default function Publications() {
           </div>
           <ul>
             <li>
+              Teaching Assistant – Capstone Project, Environmental Science (ES){" "}
+              <span className="tag">NC State University</span> (Jan 2026 – Present)
+            </li>
+            <li>
               Teaching Assistant – Software Engineering{" "}
               <span className="tag">NC State University</span> (May 2025 – July
               2025)

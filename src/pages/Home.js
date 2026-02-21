@@ -115,7 +115,7 @@ export default function Home() {
               LinkedIn
             </a>
             <a
-              href="https://drive.google.com/file/d/1aREc-xnvABeh2piOJL11nAOxaEKvLr_e/view?usp=sharing"
+              href="https://drive.google.com/file/d/1AEqi4afibshlxf4zNZ0qHc3bOwrijywU/view?usp=sharing"
               className="btn resume"
               target="_blank"
               rel="noreferrer"

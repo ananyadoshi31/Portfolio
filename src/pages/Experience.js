@@ -96,10 +96,8 @@
 //   );
 // }
 import {
-  FaCode,
   FaReact,
   FaLaptopCode,
-  FaHandsHelping,
   FaMobile,
   FaDatabase,
 } from "react-icons/fa";
@@ -117,18 +115,14 @@ export default function Experience() {
           <div className="timeline-card">
             <h3>ReFiBuy AI</h3>
             <p>
-              <strong>Role:</strong> Software Engineer Intern (Aug 2025 – Jan
-              2026)
+              <strong>Role:</strong> Software Engineer Intern (Aug 2025 – Present)
             </p>
             <p>
-              – Spearheaded prompt engineering in Langfuse for Agentic AI
-              product scoring, enabling adaptive decision-making across diverse
-              e-commerce sources, reducing catalog enrichment time by 20%.
+              – Spearheaded prompt engineering in Langfuse for Agentic AI product scoring, leveraging RAG models to enhance catalog quality across diverse e-commerce sources, reducing enrichment time by 20%.
               <br />
-              – Built user interfaces in Next.js, integrating with .NET APIs,
-              enabling processing of 100K products daily.
-              <br />– Optimized PostgreSQL queries and deployed scalable
-              solutions on Azure with 100% uptime in production.
+              – Built Next.js frontend integrated with .NET APIs and shipped a CI/CD pipeline for automated end-to-end testing with Playwright, including real-time alert monitoring for test failures, improving production reliability by 25%.
+              <br />
+              – Containerized services using Docker, enhanced PostgreSQL schemas and built a unified API gateway to centralize 15+ backend endpoints, reducing API latency by 25%.
             </p>
           </div>
         </div>
@@ -140,20 +134,14 @@ export default function Experience() {
           <div className="timeline-card">
             <h3>Everything Parlays</h3>
             <p>
-              <strong>Role:</strong> Software Engineer Intern (June 2025 – Aug
-              2025)
+              <strong>Role:</strong> Software Engineer Intern (Jun 2025 – Aug 2025)
             </p>
             <p>
-              – Delivering production-ready features for an iOS app with React
-              Native, increasing user engagement by 26%.
+              – Delivered production-ready features for an iOS app with React Native, increasing user engagement by 26%.
               <br />
-              – Implementing scalable backend services with MongoDB and AWS CDK,
-              decreasing average API response times by 15%.
+              – Deployed scalable backend services with MongoDB and AWS Lambda, improving system throughput by 15%.
               <br />
-              – Designing and optimizing event-driven architecture for real-time
-              notification system, supporting 5,000+ concurrent users.
-              <br />– Automating CI/CD workflows with GitHub actions,
-              accelerating release velocity by 33%.
+              – Designed a real-time chat and event-driven notification system, ensuring scalability and reliable messaging for 1M+ users.
             </p>
           </div>
         </div>
@@ -163,60 +151,15 @@ export default function Experience() {
             <FaDatabase />
           </div>
           <div className="timeline-card">
-            <h3>
-              NC State University, Department of Forestry and Environmental
-              Resources
-            </h3>
+            <h3>NC State University</h3>
             <p>
-              <strong>Role:</strong> Research Assistant (May 2025 – July 2025)
+              <strong>Role:</strong> Research Assistant (May 2025 – Jul 2025)
             </p>
             <p>
-              – Built and optimized ML pipelines to predict water quality
-              indicators with up to 12% accuracy improvement.
+              – Engineered and streamlined ML pipelines on Linux to predict water quality indicators, improving model accuracy by 12%.
               <br />
-              – Applied cloud-based tools and distributed computing principles
-              to support large datasets, enhance processing speed by 8%.
-              <br />– Implemented data ingestion and visualization pipelines to
-              enable actionable insights for decision-making.
+              – Implemented data ingestion and transformation pipelines using Apache Spark, processing multi-source water quality datasets and enhancing processing speed by 8%.
             </p>
-          </div>
-        </div>
-
-        <div className="timeline-item">
-          <div className="timeline-icon">
-            <FaCode />
-          </div>
-          <div className="timeline-card">
-            <h3>Expertiza (Open-Source Project)</h3>
-            <p>
-              <strong>Role:</strong> Backend Developer (Feb 2025 – Apr 2025)
-            </p>
-            <p>
-              – Worked on backend of Expertiza using Ruby on Rails, created
-              APIs, tested with Postman and deployed to AWS.
-              <br />
-              – Refactored code to meet design principles and ensured
-              system-wide compatibility.
-              <br />
-              – Conducted model/controller testing with 95% coverage.
-              <br />– Documented backend architecture in Expertiza Wiki.
-            </p>
-            <div className="project-links">
-              <a
-                href="https://github.com/valorant-dhruv/reimplementation-back-end"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                GitHub Repository
-              </a>
-              <a
-                href="https://wiki.expertiza.ncsu.edu/index.php?title=CSC/ECE_517_Spring_2025_E2515:_Reimplement_student_teams_controller.rb"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Design Documentation
-              </a>
-            </div>
           </div>
         </div>
 
@@ -225,60 +168,16 @@ export default function Experience() {
             <FaReact />
           </div>
           <div className="timeline-card">
-            <h3>Ascorb Technologies Pvt. Ltd. – Edmingle</h3>
+            <h3>Ascorb Technologies Pvt Ltd</h3>
             <p>
-              <strong>Role:</strong> Software Engineer Intern (Jun 2023 – Sep
-              2023)
+              <strong>Role:</strong> Software Engineer Intern (Jun 2023 – Sep 2023)
             </p>
             <p>
-              – Built student-faculty portal in ReactJS, reducing admin load by
-              30%.
+              – Developed web-app platform using React and TypeScript, with Redux for state management serving over 1.5M+ users.
               <br />
-              – Enhanced Zoom desktop with Electron SDK; integrated third-party
-              tools.
+              – Upgraded Zoom video conferencing tool with new features via Electron, cutting user-reported issues by 15%.
               <br />
-              – Developed CRUD filters; improved response time across 450+
-              products.
-              <br />– Wrote technical docs to ease knowledge transfer.
-            </p>
-          </div>
-        </div>
-
-        <div className="timeline-item">
-          <div className="timeline-icon">
-            <FaLaptopCode />
-          </div>
-          <div className="timeline-card">
-            <h3>Skilligence Edtech</h3>
-            <p>
-              <strong>Role:</strong> Frontend Web Developer Intern (Apr 2023 –
-              Jun 2023)
-            </p>
-            <p>
-              – Designed UI wireframes on Figma, implemented in
-              React/TypeScript.
-              <br />
-              – Increased user retention by 45%.
-              <br />– Debugged and optimized code; performance up by 30%.
-            </p>
-          </div>
-        </div>
-
-        <div className="timeline-item">
-          <div className="timeline-icon">
-            <FaHandsHelping />
-          </div>
-          <div className="timeline-card">
-            <h3>Suvidha Foundation</h3>
-            <p>
-              <strong>Role:</strong> Web Developer Intern (Dec 2022 – Jan 2023)
-            </p>
-            <p>
-              – Designed and deployed responsive UI dashboards.
-              <br />
-              – Created 6 dashboards that boosted engagement by 20%.
-              <br />– Led fundraising campaign; raised ₹4,000+ and improved
-              donations by 10%.
+              – Integrated backend APIs in NodeJS and collaborated on design documentation, accelerating project velocity by 22%.
             </p>
           </div>
         </div>
